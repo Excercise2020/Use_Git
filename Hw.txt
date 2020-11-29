@@ -1,0 +1,46 @@
+git init  
+-->> สร้าง Git ทุกครั้งก่อนเริ่ม PJ
+
+git add <NAME FILE> 
+-->> ใช้ ADD file ก่อนที่จะ commit ทุกครั้งไม่งั้นจะ commit ไม่ได้
+
+git commit -m "first commit" 
+-->> ใช้ commit (saveแล้ว) คือ backup ฝั่งของ local ก่อนที่จะโยนไป Remote 
+
+git remote add origin <URL GITHUB>  
+-->> ใช้ Remote ไปยัง URL ของ github ของ repository นั้นๆ
+
+git remote set-url origin <NEW URL GITHUB>
+-->> ใช้เปลี่ยน url จาก url เดิมเป็น url ใหม่
+
+git config --get remote.origin.url
+git remote show origin
+-->> Check url ที่ใช้อยู่ อันไหนก็ได้มีสองคำสั่ง
+
+git push -u origin <branch> 
+-->> ใช้โยนข้อมูล จาก local ไป backup ไว้ที่ GITHUB
+
+git log
+-->> เช็คประวัติการทำงาน
+
+git status
+-->> เช็คสถานะว่ามีการเปลี่ยนแปลงอะไรบ้าง
+
+git branch
+-->> เช็ค branch 
+
+git config --global user.name "name"
+git config --global user.email "email"
+-->> การตั้งชื่อและอีเมล
+
+git config --global --list
+-->> เช็ค username email
+
+git checkout <branch_name>
+-->> เปลี่ยน branch
+
+git branch -d <branch_name>
+-->> ลบ branch
+
+git reset <file name>
+-->> ใช้ลบไฟที่ใช้ git add ออก ย้ายไฟล์จาก stage กลับไป unstage
